@@ -2,18 +2,19 @@
 ## Introductory Project: Diagonal Sudoku Solver
 
 # Question 1 (Naked Twins)
-Q: How do we use constraint propagation to solve the naked twins problem?  
-A: *Student should provide answer here*
+Q: How do we use constraint propagation to solve the naked twins problem?
+A: We go through every unit and find all potential twins. These are boxes, which can contain exactly two possible digits. Then, we identify all the unique naked twin pairs by trying all combinations of potential twin pairs by comparing their values. Finally, we go through every twin pair and find the common peers by using set intersection. We go through every peer and remove the candidate solutions found in the naked twin pair.
 
 # Question 2 (Diagonal Sudoku)
-Q: How do we use constraint propagation to solve the diagonal sudoku problem?  
-A: *Student should provide answer here*
+Q: How do we use constraint propagation to solve the diagonal sudoku problem?
+A: We solve this in a very straightforward manner. Since we apply contraints against units and peers (and peers are built from the unit lists), we can simply add another list of units to the unit list to represent the two big diagonals.
+
 
 ### Install
 
 This project requires **Python 3**.
 
-We recommend students install [Anaconda](https://www.continuum.io/downloads), a pre-packaged Python distribution that contains all of the necessary libraries and software for this project. 
+We recommend students install [Anaconda](https://www.continuum.io/downloads), a pre-packaged Python distribution that contains all of the necessary libraries and software for this project.
 Please try using the environment we provided in the Anaconda lesson of the Nanodegree.
 
 ##### Optional: Pygame

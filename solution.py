@@ -34,9 +34,9 @@ def naked_twins(values):
                                     if (box1 != box2 and values[box1] == values[box2])
         }
         for (twin1, twin2) in twin_pairs:
-            # For each twin pair, find the common pears
+            # For each twin pair, find the common peers
             common_peers = set(peers[twin1]) & set(peers[twin2])
-            # For each of the common pears, eliminate values which are part of the twins
+            # For each of the common peers, eliminate values which are part of the twins
             for peer in common_peers:
                 for digit in values[twin1]:
                     assign_value(values, peer, values[peer].replace(digit, ''))
